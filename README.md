@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# Frontend Engineer Interview Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a UI recreation task based on provided screenshots of an existing web application.  
+The goal is to reproduce the screens with **pixel-close accuracy**, clean component structure, and responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tech Stack
 
-## React Compiler
+- **React** (Vite)
+- **TypeScript**
+- **Tailwind CSS**
+- **React Router** (for navigation, if applicable)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📱 Screens Implemented
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1️⃣ Home Screen (Dashboard)
+- User dashboard with XP progress
+- Main action icons
+- Horizontal story carousels
+- Bottom navigation bar
+- Mobile-first responsive layout
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 2️⃣ Now Playing (Audio Story Player)
+- Story artwork
+- Title & description
+- Audio controls (UI only)
+- Clean and focused player layout
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 3️⃣ Craft a Custom Quiz (Learn Tab)
+- Topic selection
+- Difficulty/challenge level selection
+- Quiz generation CTA
+- Step-based UI flow
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🎯 UI / UX Focus
+
+- Pixel-close spacing & alignment
+- Consistent typography using Tailwind utilities
+- Mobile-first design approach
+- Tablet & desktop responsiveness (best effort)
+
+---
+
+## 📂 Folder Structure
+
+```text
+src/
+│── components/        # Reusable UI components
+│── pages/             # Screen-level components
+│── assets/            # Images, icons, static assets
+│── routes/            # App routing configuration
+│── styles/            # Global styles (if needed)
+│── App.tsx
+│── main.tsx
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 How to Run the Project Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repository
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+git clone https://github.com/Ibne-Shahid/sg-task.git
+
 ```
+
+Install dependencies
+
+```text
+npm install
+
+```
+
+Run the development server
+
+```text
+npm run dev
+
+```
+
+Open your browser and go to: http://localhost:5173
+
+## 🧠 Assumptions Made
+
+Audio functionality is UI-only (no real audio playback)
+
+Static/dummy data is used where API details were not provided
+
+Focus was placed on UI accuracy and component structure rather than backend logic
+
+## 🌐 Live Demo
+
+**👉 Live URL:** https://verdant-beignet-deae71.netlify.app/
