@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router";
-import App from "./App";
-import HomeScreen from "./HomeScreen";
-import AudioPlayer from "./AudioPlayer";
+import App from "../App";
+import HomeScreen from "../Pages/HomeScreen";
+import AudioPlayer from "../Pages/AudioPlayer";
+import QuizCreator from "../Pages/QuizCreator";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
         path: "audio-player",
         element: <AudioPlayer />,
       },
+      {
+        path: "quiz-creator",
+        element: <QuizCreator />
+      }
     ],
   },
 ]);

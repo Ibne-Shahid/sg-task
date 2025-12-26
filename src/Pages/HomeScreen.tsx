@@ -7,7 +7,7 @@ import {
     ChevronRight,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import type { Story } from './types/index';
+import type { Story } from '../types/index';
 
 
 const STORIES: Story[] = [

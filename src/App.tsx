@@ -3,7 +3,8 @@ import {
   Home,
   GraduationCap,
   Mic,
-  User, ListMusic
+  User, ListMusic,
+  BookCheck
 } from "lucide-react";
 
 function App() {
@@ -36,6 +37,17 @@ function App() {
           Player
         </NavLink>
 
+        <NavLink
+          to="/quiz-creator"
+          className={({ isActive }) =>
+            `flex items-center gap-4 px-6 py-4 rounded-2xl font-black transition
+     ${isActive ? "bg-green-50 text-[#22C55E]" : "text-slate-500 hover:bg-slate-50"}`
+          }
+        >
+          <BookCheck size={22} />
+          Active Builder
+        </NavLink>
+
       </aside>
 
       {/* PAGE */}
@@ -58,7 +70,7 @@ function App() {
         </NavLink>
 
         <NavLink
-          to="/learn"
+          to="/quiz-creator"
           className={({ isActive }) =>
             `flex flex-col items-center gap-1 transition
        ${isActive ? "text-[#22C55E]" : "text-slate-400"}`
@@ -79,16 +91,11 @@ function App() {
           <span className="text-[10px] font-black">Player</span>
         </NavLink>
 
-        <NavLink
-          to="/profile"
-          className={({ isActive }) =>
-            `flex flex-col items-center gap-1 transition
-       ${isActive ? "text-[#22C55E]" : "text-slate-400"}`
-          }
-        >
+        <div className="flex flex-col items-center gap-1 text-slate-400">
           <User size={24} />
           <span className="text-[10px] font-black">Profile</span>
-        </NavLink>
+        </div>
+
 
       </nav>
 
