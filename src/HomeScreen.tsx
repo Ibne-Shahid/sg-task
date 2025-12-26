@@ -5,10 +5,6 @@ import {
     BookOpen,
     Bot,
     ChevronRight,
-    Home,
-    GraduationCap,
-    Mic,
-    User
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import type { Story } from './types/index';
@@ -30,17 +26,9 @@ const actions: { icon: LucideIcon; label: string; color: string }[] = [
 
 const HomeScreen = () => {
     return (
-        <div className="min-h-screen bg-[#FDFDFD] flex flex-col lg:flex-row">
+        <div className="bg-[#FDFDFD] pb-24 lg:pb-12">
 
-            {/* --- SIDEBAR (ONLY PC) --- */}
-            <aside className="hidden lg:flex w-72 bg-white border-r border-slate-100 flex-col sticky top-0 h-screen p-8 z-50">
-                <h1 className="text-2xl font-black text-[#22C55E] italic tracking-tighter mb-10">SpeakUp.</h1>
-                <nav className="space-y-2">
-                    <div className="flex items-center gap-4 px-6 py-4 bg-green-50 text-[#22C55E] rounded-2xl font-black cursor-pointer">
-                        <Home size={22} /> Home
-                    </div>
-                </nav>
-            </aside>
+            
 
             {/* --- MAIN CONTENT --- */}
             <main className="flex-1 pb-24 lg:pb-12">
@@ -203,13 +191,7 @@ const HomeScreen = () => {
                 </div>
             </main>
 
-            {/* Bottom Nav (Mobile) */}
-            <nav className="lg:hidden fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-slate-100 flex justify-around py-5 z-50">
-                <Home size={24} className="text-[#22C55E]" />
-                <GraduationCap size={24} className="text-slate-300" />
-                <Mic size={24} className="text-slate-300" />
-                <User size={24} className="text-slate-300" />
-            </nav>
+            
         </div>
     );
 };
