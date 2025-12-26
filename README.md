@@ -10,7 +10,7 @@ The goal is to reproduce the screens with **pixel-close accuracy**, clean compon
 - **React** (Vite)
 - **TypeScript**
 - **Tailwind CSS**
-- **React Router** (for navigation, if applicable)
+- **React Router** (for navigation)
 
 ---
 
@@ -87,11 +87,11 @@ Open your browser and go to: http://localhost:5173
 
 ## 🧠 Assumptions Made
 
-Audio functionality is UI-only (no real audio playback)
+- The audio player is **UI-only** and does not include real audio playback functionality.
+- **Static / dummy data** has been used in places where API specifications or backend services were not provided.
+- The primary focus of this task was on **UI accuracy, component structure, and responsiveness**, rather than backend logic or data handling.
+- Although the designs were provided as **separate screenshots**, a **routing-based structure** was implemented for better navigation, code organization, and scalability.
 
-Static/dummy data is used where API details were not provided
-
-Focus was placed on UI accuracy and component structure rather than backend logic
 
 ## 🌐 Live Demo
 
