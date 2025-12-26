@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import { ChevronLeft, Sparkles, Lightbulb, Zap, Target } from 'lucide-react';
 import type { ChallengeLevel } from '../types';
+import Swal from 'sweetalert2';
 
 const QuizCreator: React.FC = () => {
     const [selectedTopic, setSelectedTopic] = useState('');
     const [level, setLevel] = useState<ChallengeLevel>('Medium');
 
     const topics = ["My Best Friend", "Cricket Basics", "Solar System", "Healthy Habits"];
+
+    const handleQuizGenerator = () => {
+        Swal.fire({
+            title: "Success!",
+            text: "Your quiz has been generated.",
+            icon: "success",
+            confirmButtonText: "OK"
+        });
+    }
 
     return (
         <div className="min-h-screen bg-[#F8FAFC] flex flex-col lg:flex-row">
@@ -91,7 +101,7 @@ const QuizCreator: React.FC = () => {
                                         className={`w-full p-5 lg:p-6 rounded-4xl border-2 flex items-center gap-5 text-left transition-all ${level === l.id ? 'border-[#22C55E] bg-white shadow-xl shadow-green-100/50' : 'border-white bg-white hover:border-slate-50 shadow-sm'}`}
                                     >
                                         <div className={`p-3.5 rounded-2xl ${level === l.id ? l.bg : 'bg-slate-50'} ${l.color}`}>
-                                            {React.cloneElement(l.icon as React.ReactElement<{size: number}>, { size: 24 })}
+                                            {React.cloneElement(l.icon as React.ReactElement<{ size: number }>, { size: 24 })}
                                         </div>
                                         <div>
                                             <h4 className="font-black text-slate-800 text-sm lg:text-base">{l.id}</h4>
@@ -142,6 +152,7 @@ const QuizCreator: React.FC = () => {
                     {/* Footer Button: SS matching Bottom Floating */}
                     <div className="mt-12 lg:mt-16 pb-24 flex justify-center lg:justify-start">
                         <button
+                            onClick={handleQuizGenerator}
                             disabled={!selectedTopic}
                             className={`w-full lg:w-auto px-16 py-5 rounded-4xl font-black text-sm tracking-widest text-white transition-all shadow-2xl ${selectedTopic ? 'bg-[#22C55E] shadow-green-200 hover:bg-green-600 scale-105 active:scale-95' : 'bg-slate-300 cursor-not-allowed opacity-50'}`}
                         >
